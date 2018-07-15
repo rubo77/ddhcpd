@@ -6,6 +6,11 @@ server is not available. DDHCPD allows every realm to have its own server;
 preserving roaming features for the client, by maintaining a common
 consens on DHCP leases.
 
+The IPv4 address range is divided into many small blocks. Each node claims a
+number of spare blocks. Clients are assigned free addresses from those blocks if
+the node has enough addresses left to assign. There is a limit for how many free
+addresses a node has to hold. If this limit is exceeded, it reserves new blocks.
+
 The implementation is flexible, meaning we do not prevent you from doing
 stupid stuff, but also allow you maximal adaption.
 
